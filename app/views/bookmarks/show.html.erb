@@ -6,9 +6,10 @@
   <div>
     <%= link_to "Edit this bookmark", edit_bookmark_path(@bookmark), class: "btn btn-primary my-2" %>
     <%= button_to "Destroy this bookmark", @bookmark, method: :delete, class: "btn btn-primary" %>
-    <br>
+    <hr>
     <%= link_to "Back to bookmarks", bookmarks_path, class: "btn btn-primary" %>
     <hr>
+    <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
 
   </div>
 
