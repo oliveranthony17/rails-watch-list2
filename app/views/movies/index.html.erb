@@ -1,0 +1,22 @@
+<div class="container">
+
+
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Movies</h1>
+  <br>
+
+
+  <%= link_to "New movie", new_movie_path, class: "btn btn-primary" %>
+  <hr>
+
+  <div id="movies">
+    <% @movies.each do |movie| %>
+
+      <%= render movie %>
+      <div>
+        <%= link_to "Show this movie", movie, class: "btn btn-primary just-center" %>
+      </div>
+    <% end %>
+  </div>
+</div>
