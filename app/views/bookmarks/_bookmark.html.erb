@@ -1,17 +1,11 @@
-<div id="<%= dom_id bookmark %>">
-  <p>
-    <strong>Movie:</strong>
-    <%= bookmark.movie_id %>
-  </p>
-
-  <p>
-    <strong>List:</strong>
-    <%= bookmark.list_id %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= bookmark.comment %>
-  </p>
-
+<div class="card-trip">
+  <img src="https://image.tmdb.org/t/p/original/<%= Movie.find(bookmark.movie_id).poster_url %> " />
+  <hr>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= Movie.find(bookmark.movie_id).title %></h2>
+      <p class="my-2">"<%= bookmark.comment %>"</p>
+    </div>
+    <h2 class="card-trip-pricing">List: <%= List.find(bookmark.list_id).name %></h2>
+  </div>
 </div>

@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
 
-<h1>Lists</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="lists">
-  <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
-  <% end %>
+
+  <h1 class="py-2">Lists</h1>
+
+  <%= link_to "New list", new_list_path, class: "btn btn-primary" %>
+  <hr>
+
+  <div id="lists">
+    <% @lists.each do |list| %>
+
+      <%= render list %>
+      <div class="justify-center text-align-center mx-auto">
+        <br>
+        <%= link_to "Show this list", list, class: "btn btn-primary justify-center text-align-center mx-auto w-100 py-2" %>
+      </div>
+      <hr>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New list", new_list_path %>

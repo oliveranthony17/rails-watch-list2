@@ -1,10 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
 
-<%= render @list %>
+  <p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
+  <%= render @list %>
 
-  <%= button_to "Destroy this list", @list, method: :delete %>
+  <br>
+  <div>
+    <%= link_to "Edit this list", edit_list_path(@list), class: "btn btn-primary" %>
+    <br>
+    <br>
+    <%= button_to "Destroy this list", @list, method: :delete, class: "btn btn-primary" %>
+    <hr>
+    <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
+  </div>
+
+
 </div>

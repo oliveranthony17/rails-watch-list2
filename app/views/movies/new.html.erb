@@ -1,9 +1,14 @@
-<h1>New movie</h1>
-
-<%= render "form", movie: @movie %>
-
 <br>
+<div class="container">
 
-<div>
-  <%= link_to "Back to movies", movies_path %>
+  <h1>New movie</h1>
+
+  <%= render "form", movie: @movie %>
+
+  <hr>
+
+  <div>
+    <%= link_to "Back to movies", movies_path, class: "btn btn-primary" %>
+  </div>
+
 </div>

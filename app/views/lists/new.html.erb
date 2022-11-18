@@ -1,9 +1,14 @@
-<h1>New list</h1>
-
-<%= render "form", list: @list %>
-
 <br>
+<div class="container">
 
-<div>
-  <%= link_to "Back to lists", lists_path %>
+  <h1>New list</h1>
+
+  <%= render "form", list: @list %>
+
+  <hr>
+
+  <div>
+    <%= link_to "Back to lists", lists_path, class: "btn btn-primary" %>
+  </div>
+
 </div>

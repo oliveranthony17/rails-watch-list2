@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @bookmark %>
+  <%= render @bookmark %>
 
-<div>
-  <%= link_to "Edit this bookmark", edit_bookmark_path(@bookmark) %> |
-  <%= link_to "Back to bookmarks", bookmarks_path %>
+  <div>
+    <%= link_to "Edit this bookmark", edit_bookmark_path(@bookmark), class: "btn btn-primary my-2" %>
+    <%= button_to "Destroy this bookmark", @bookmark, method: :delete, class: "btn btn-primary" %>
+    <br>
+    <%= link_to "Back to bookmarks", bookmarks_path, class: "btn btn-primary" %>
+    <hr>
 
-  <%= button_to "Destroy this bookmark", @bookmark, method: :delete %>
+  </div>
+
 </div>

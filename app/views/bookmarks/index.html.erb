@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Bookmarks</h1>
+  <h1>Bookmarks</h1>
 
-<div id="bookmarks">
-  <% @bookmarks.each do |bookmark| %>
-    <%= render bookmark %>
-    <p>
-      <%= link_to "Show this bookmark", bookmark %>
-    </p>
-  <% end %>
+  <%= link_to "New bookmark", new_bookmark_path, class: "btn btn-primary" %>
+  <hr>
+
+  <div id="bookmarks">
+    <% @bookmarks.each do |bookmark| %>
+      <%= render bookmark %>
+      <p>
+        <%= link_to "Show this bookmark", bookmark, class: "btn btn-primary my-3 w-100" %>
+      </p>
+      <hr>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New bookmark", new_bookmark_path %>
